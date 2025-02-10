@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Suggestions</title>
+   <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    color: #211414;
+    background-color: rgb(251, 236, 220);
+    margin: 0;
+    padding: 0;
+    
+  } 
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 20px 10%;
+    background:rgb(228, 175, 143);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: rgba(179, 91, 15, 0.719);
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    color: rgba(248, 173, 67, 0.725);
+    text-shadow: 0 0 10px rgba(244, 180, 63, 0.725);
+    transform: scale(1.1);
+}
+.c{
+    color:rgba(78, 40, 2, 0.792);
+}
+
+.navbar a{
+    font-size: 18px;
+    color:rgb(123, 78, 6);
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover , .navbar a:active{
+    color: rgba(233, 169, 78, 0.725);
+    border-bottom: 3px solid rgba(240, 174, 69, 0.988);
+}
+.header-title {
+    text-align: center;
+    margin-top: 5px; /* Adjust as needed */
+    margin-bottom: 5px;
+    font-size: 2em;
+    color: rgb(250, 247, 242);
+}
+
+.form-container {
+    max-width: 650px;
+    margin-top: 170px;
+    margin-left: 350px;
+    padding:5px 20px 20px 5px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(78, 75, 71, 0.995);
+    background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.form-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    display: block;
+    color: rgb(250, 243, 236);
+    text-align: left;
+}
+
+.form-select, .form-input {
+    width: 97%;
+    padding: 10px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-select:focus, .form-input:focus {
+    border-color: rgba(179, 91, 15, 0.719);
+    outline: none;
+}
+
+.contact {
+    padding: 10px 20px;
+    background: #692e17;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794') no-repeat center center fixed;
+    
+   
+}
+
+.contact:hover {
+    color: rgba(249, 206, 151, 0.725);
+    box-shadow: 0 0 10px rgba(206, 185, 160, 0.995);
+}
+
+  .footer{
+    text-align: center;
+    padding: 20px;
+    color: black;
+    margin-bottom: 0%;
+    background-color: white;
+    margin-top: 170px;
+  }
+  
+   </style>
+</head>
+<body>
+    <header>
+        <header class="header">
+          <a href="#" class="logo"><span class="c">B</span>ook<span class="c">Q</span>uest</a>
+      
+          <nav class="navbar">
+           <a href="home.html" class="active">Home</a>
+           <a href="login.html">Login</a>
+           <a href="contact.html">Contact</a>
+           <a href="suggestion.html">Recommendations</a>
+          </nav>
+          <input type="text" name="Search for book" placeholder="Search for Book">
+       </header>
+    <!-- Mood and Interest Form -->
+    <div id="mood-form" class="form-container">
+        <h1 class="header-title">Book Recommendations</h1>
+        <label for="mood" class="form-label">Select Mood:</label>
+        <select id="mood" class="form-select" onchange="checkCustomMood()">
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="excited">Excited</option>
+            <option value="angry">Angry</option>
+            <option value="bored">Bored</option>
+            <option value="relaxed">Relaxed</option>
+            <option value="inspired">Inspired</option>
+            <option value="adventurous">Adventurous</option>
+            <option value="nostalgic">Nostalgic</option>
+            <option value="curious">Curious</option>
+            <option value="other">Other (enter your own)</option>
+        </select>
+        
+        <input type="text" id="customMood" class="form-input" placeholder="Enter your mood" style="display: none;" />
+
+        <label for="interest" class="form-label">Select Interest:</label>
+        <select id="interest" class="form-select" onchange="checkCustomInterest()">
+            <option value="adventure">Adventure</option>
+            <option value="mystery">Mystery</option>
+            <option value="romance">Romance</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>
+            <option value="thriller">Thriller</option>
+            <option value="psychology">Psychology</option>
+            <option value="self-help">Self-Help</option>
+            <option value="biography">Biography</option>
+            <option value="fiction">Fiction</option>
+            <option value="poetry">Poetry</option>
+            <option value="philosophy">Philosophy</option>
+            <option value="other">Other (enter your own)</option>
+        </select>
+        <input type="text" id="customInterest" class="form-input" placeholder="Enter your interest" style="display: none;" />
+
+        <button class="contact" onclick="getSuggestions()">Get Book Suggestions</button>
+    </div>
+
+    <!-- Display Book Suggestions -->
+    <div id="bookSuggestions">
+        <h2>Book Suggestions:</h2>
+        <ul id="booksList">
+            <!-- Book list will be displayed here -->
+        </ul>
+    </div>
+
+    <script src="scripts2.js"></script>
+</body>
+</html>

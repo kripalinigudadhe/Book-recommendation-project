@@ -1,0 +1,102 @@
+ body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 251px;
+  } 
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 20px 10%;
+    background:rgb(247, 247, 248);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: rgba(179, 91, 15, 0.719);
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    color: rgba(248, 173, 67, 0.725);
+    text-shadow: 0 0 10px rgba(244, 180, 63, 0.725);
+    transform: scale(1.1);
+}
+.c{
+    color:rgba(78, 40, 2, 0.792);
+}
+
+.navbar a{
+    font-size: 18px;
+    color:rgb(123, 78, 6);
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover , .navbar a:active{
+    color: rgba(233, 169, 78, 0.725);
+    border-bottom: 3px solid rgba(240, 174, 69, 0.988);
+}
+
+.contact{
+    padding: 8px 28px 10px;
+    background-color: rgb(250, 178, 119);;
+    color: rgb(12, 12, 12);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact:hover{
+    color: rgba(249, 206, 151, 0.725);
+    box-shadow: 0 0 10px rgba(235, 183, 120, 0.995);
+}
+  
+  .hero {
+    text-align: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 200px;
+  }
+  
+  .button {
+    display: inline-block;
+    background: #4d0d0f;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition:0.3s ease;
+  }
+  
+  .button:hover {
+    background: #e8ae5c;
+  }
+
+  footer{
+    text-align: center;
+    padding: 10px;
+    color: black;
+    margin-bottom: 0%;
+    background-color: white;
+    margin-top: 251px;
+  }
+  
